@@ -10,3 +10,7 @@ srcDir        = "src"
 # Dependencies
 
 requires "nim >= 1.4.8"
+
+task docgen, "Generate html documents":
+  selfExec "doc --outdir:htmldocs --index:on src/divmath.nim"
+  selfExec "buildIndex -o:htmldocs/theindex.html htmldocs"

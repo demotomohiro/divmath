@@ -1,8 +1,8 @@
 proc robustCeilDiv*[T: SomeInteger](x, y: T): T {.inline.} =
   ## Ceil division is conceptually defined as `ceil(x / y)`.
   ##
-  ## This is different from the `system.div <system.html#div,int,int>`_
-  ## operator, which is defined as `trunc(x / y)`.
+  ## This is different from the `system.div` operator in stdlib,
+  ## which is defined as `trunc(x / y)`.
   ## That is, `div` rounds towards `0` and `ceilDiv` rounds up.
   runnableExamples:
     assert robustCeilDiv( 12,  3) ==  4
